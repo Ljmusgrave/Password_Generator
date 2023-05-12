@@ -6,9 +6,9 @@
 import random
 import string
 
-# These allow me to change the length of the password, the amount of type of characters used, and the
-# minimum amount needed of each given character (will CRASH if total amount of needed given
-# characters exceeds password_len)
+"""These allow me to change the length of the password, the amount of type of characters used, and the
+minimum amount needed of each given character (will CRASH if total amount of needed given
+characters exceeds password_len)"""
 password_len = random.randint(16, 20)
 num_of_type = len(["lowercase letters", "uppercase letters", "numbers", "punctuation"])
 min_needed_char = 2
@@ -42,9 +42,9 @@ def generate_password(type_char):
     final_password += type_char
 
 
-# Maybe I could shorten this section by using another function and a dictionary that ties var# to its given
-# random selection? I don't know how to keep the random selection random if I assign it to anything like a
-# variable or dictionary though...
+"""Maybe I could shorten this section by using another function and a dictionary that ties var# to its given
+random selection? I don't know how to keep the random selection random if I assign it to anything like a
+variable or dictionary though..."""
 while var1_count > 0:
     # I use strings.digits instead of random.randint() so it is treated as a string and not an int
     generate_password(random.choice(string.digits))
